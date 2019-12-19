@@ -1,0 +1,8 @@
+---
+- name: This is tomcat war file deployment 
+  hosts: all_hosts
+  tasks:
+    - name: tomcat war file deployment is successful. 
+      copy:
+        src: /opt/tomcat/sample.war
+        dest: /opt/tomcat/apache-tomcat-9.0.30/webapps 
