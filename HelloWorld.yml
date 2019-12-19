@@ -4,9 +4,5 @@
   tasks:
     - name: tomcat war file deployment is successful. 
       copy:
-        src: /opt/tomcat/sample.war
+        src: /home/ansadmin/Second_Project/file.yml 
         dest: /opt/tomcat/apache-tomcat-9.0.30/webapps
-     - name: github file copy to tomcat server.
-       copy:
-         src: /home/ansadmin/Second_Project/file.yml
-         dest: /opt/tomcat/apache-tomcat-9.0.30/webapps   
