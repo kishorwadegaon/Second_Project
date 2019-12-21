@@ -1,8 +1,21 @@
 ---
 - name: This is tomcat war file deployment 
   hosts: all_hosts
+  # sudo permission
+  become: true
   tasks:
     - name: tomcat war file deployment is successful. 
       copy:
         src: /home/ansadmin/Second_Project/file.yml 
         dest: /opt/tomcat/apache-tomcat-9.0.30/webapps
+
+    - name: tomcat war file deployment is successful.
+      copy:
+        src: /home/ansadmin/Second_Project/README.md
+        dest: /opt/tomcat/apache-tomcat-9.0.30/webapps
+    - name: tomcat restart
+      command: sh /opt/tomcat/apache-tomcat-9.0.30/bin/shutdown.sh
+    - name: wait for 10 min
+      command: sleep 10s
+    - name: tomcat restart
+      command: sh /opt/tomcat/apache-tomcat-9.0.30/bin/startup.sh
