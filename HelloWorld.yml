@@ -19,3 +19,4 @@
       command: sleep 10s
     - name: tomcat restart
       command: sh /opt/tomcat/apache-tomcat-9.0.30/bin/startup.sh
+test value
